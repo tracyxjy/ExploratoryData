@@ -5,7 +5,7 @@ kwh$Date2<-as.Date( kwh$Date, "%d/%m/%Y")
 subset_kwh<-subset(kwh,Date2==as.Date("2007-02-01") | Date2==as.Date("2007-02-02"))
 subset_kwh<-within(subset_kwh,datetime<-strptime(paste(subset_kwh$Date, subset_kwh$Time, sep=" "), format="%d/%m/%Y %H:%M:%S"))
 
-##### Plot Histograms #####
+##### Plot  #####
 par(mar=c(5,5,2,2))
 plot(subset_kwh$datetime,subset_kwh$Global_active_power,type="n",main=" ",xlab="",ylab="Global Active Power(kilowatts)")
 lines(subset_kwh$datetime,subset_kwh$Global_active_power)
